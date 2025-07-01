@@ -1,0 +1,9 @@
+{
+    "name": "x/glacticnews",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}

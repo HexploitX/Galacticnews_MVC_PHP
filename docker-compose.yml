@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+    db:
+        image: mysql:8.0
+        container_name: news_mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: admin
+            MYSQL_DATABASE: galactic_news
+            MYSQL_USER: admin
+            MYSQL_PASSWORD: admin
+        volumes:
+            - ./news.sql:/docker-entrypoint-initdb.d/mysql.sql:ro
+        ports:
+            - "3307:3306"
+
+    web:
+        build: .
+        container_name: galactic_app
+        depends_on:
+            - db
+        ports:
+            - "8080:80"
+        volumes:
+            - ./src:/var/www/html
+            - ./images:/var/www/html/images
