@@ -23,7 +23,7 @@
 		<section class="sect banner">
 			<?if (!empty($latestNews)): ?>
 				<div class="banner__wrap-bkg">
-					<img src="images/<?= $latestNews['image'];?>" class="banner__bkg"/>
+					<img src="./images/<?= $latestNews['image'];?>" class="banner__bkg"/>
 				</div>
 				<div class="container">
 					<div class="banner__box">

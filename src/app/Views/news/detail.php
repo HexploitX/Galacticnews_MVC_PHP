@@ -60,7 +60,7 @@
 					</div>
 					<div class="news-detail__col">
 						<figure>
-							<img class="news-detail__img" src="images/<?=$newsItem['image'];?>"/>
+							<img class="news-detail__img" src="./images/<?=$newsItem['image'];?>"/>
 						</figure>
 					</div>
 				</div>
